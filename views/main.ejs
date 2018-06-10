@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相册系统</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><img src="/images/logo1.png" alt=""></h1>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="#">个人中心</a></li>
+                    <li>
+                        <a href="#" class="myHome">个人主页</a>
+                        <div class="select">
+                            <ul>
+                                <li><a href="">日志</a></li>
+                                <li><a href="">相册</a></li>
+                                <li><a href="">说说</a></li>
+                                <li><a href="">分享</a></li>
+                                <li><a href="">视频</a></li>
+                                <li><a href="">音乐</a></li>
+                                <li><aw href="">留言板</a></li>
+                                <li><a href="">个人档</a></li>
+                                <li><a href="">收藏</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">相册信息</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li id="exit">退出</li>
+                    <li>设置</li>
+                    <li>个人信息</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 头像 -->
+    <div class="pic">
+        <div class="container">
+            <div class="head_pic"><img src="<%=fileName%>" alt=""></div>
+            <div class="text">
+                <div class="me">
+                    <span><%=username%></span>
+                </div>
+                <div class="cai">
+                    <ul>
+                        <li><a href="">更多</a></li>
+                        <li><a href="">更多</a></li>
+                        <li><a href="">更多</a></li>
+                        <li><a href="">更多</a></li>
+                        <li><a href="">更多</a></li>
+                        <li><a href="">更多</a></li>
+                        <li><a href="">更多</a></li>
+                        <li><a href="">更多</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 相册 -->
+    <div class="container">
+        <section class="album">
+            <div class="title">
+                <ul>
+                    <li><a href="">相册</a></li>
+                    <li><a href="">照片</a></li>
+                    <li><a href="">面孔墙</a></li>
+                    <li><a href="">视频</a></li>
+                </ul>
+            </div>
+            <div class="upload">
+                <ul>
+                    <li><a href="#" id="uploadPic">上传照片</a></li>
+                    <li><a href="#" id="createAlbum">创建相册</a></li>
+                    <li class="cur" id=""><a href="/main?username=<%=username%>">我的相册</a></li>
+                    <li><a href="#" id="allUser">全部用户</a></li>
+                </ul>
+            </div>
+            <div class="show">
+                <a class="hidden" href=""></a>
+                <input type="hidden" name="currentname" id="currentname" value="<%=currentname%>"/>
+                <ul class="showImg">
+                    <% for(var i=0; i<arr.length; i++) {%>
+                        <li class="li_dir">
+                            <div class="images">
+                                <img src="images/folder.png" alt="" class="cover">
+                            </div>
+                            <p class="explain">
+                                <a href="" class="Alame"><%=arr[i]%></a>
+                                <a href="">图标</a>
+                            </p>
+                            <div class="mask">
+                                <a href="" class="delAlbum"><img src="images/del.png" alt=""></a>
+                            </div>
+                        </li>
+                    <%}%>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 弹出框 -->
+        <div class="meng">
+        </div>
+        <div class="uploadFiles">
+            <div>
+                <div class="left">
+                    <p>请选择上传的文件夹:</p>
+                    <select name="" id="wenjianjia" multiple>
+                        <% for(var i=0; i<arr.length; i++) {%>
+                            <option value=""><%=arr[i]%></option>
+                        <%}%>
+                    </select>
+                </div>
+                <div class="right">
+                    <input type="file" multiple name="file">
+                    <button>开始上传</button>
+                    <button class="cancel">取消</button>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <footer>    
+        <div class="container">
+            <p>Copyright © 2005 - 2018 Joanne.All Rights Reserved.</p>
+            <p>版权所有</p>
+        </div>
+    </footer>
+
+    
+
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(function() {
+            // 第一个li也就是包含head_pic的相册和图片不允许删
+            $(".showImg li:contains('head_pic')").find(".mask").children().hide();
+        })
+
+    </script>
+</body>
+</html>

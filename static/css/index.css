@@ -1,0 +1,188 @@
+a {
+    color: #221D3B;
+    font-size: 14px;
+}
+.pic {
+    padding: 50px 50px 10px;
+    height: 150px;
+}
+.pic .head_pic {
+    float: left;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #FFFFFF;
+    /* display: inline-block; */
+}
+.pic .text {
+    float: left;
+    /* display: inline-block; */
+    margin-left: 20px;
+}
+.pic .text .me {
+    height: 50px;
+    color: #E6E6FA;
+    font-family: "punctuation", "PingFangSC-Regular", "Microsoft Yahei", sans-serif;
+    font-size: 20px;
+    padding: 20px;
+}
+.pic .cai ul {
+    padding: 10px;
+}
+.pic .cai ul li {
+    float: left;
+    width: 30px;
+    margin-right: 10px;
+}
+.pic .cai ul li a {
+    color: #F0F8FF;
+}
+.album {
+    background: #FBFBFB url(/images/leaf.png) repeat-x;
+    border: 2px solid #eee;
+    border-radius: 2px;
+    /* height: 600px; */
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+.album .title {
+    height: 40px;
+    border-bottom: 1px solid #eee;
+}
+.album .title ul li {
+    float: left;
+    height: 40px;
+    padding-right: 40px;
+}
+.album .title ul li a {
+    display: block;
+    height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+}
+.album .title ul li a:hover {
+    border-bottom: 3px solid gray;
+}
+.album .upload {
+    height: 70px;
+    padding-top: 30px;
+}
+.album .upload ul li {
+    float: left;
+    margin-right: 12px;
+    width: 100px;
+    background-color: #C1C1C1;
+    text-align: center;
+    line-height: 35px;
+
+}
+.album .upload ul li a {
+    font-size: 16px;
+    color: #fff;
+}
+.album .upload ul li:hover, .album .upload ul li.cur{
+    background-color: gray;
+}
+.album .show ul {
+    overflow: hidden;
+}
+.album .show ul li {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    padding: 4px;
+    position: relative;
+    cursor: pointer;
+}
+.album .show ul li.li_dir,
+.album .show ul li.li_pic {
+    width: 180px;
+    height: 220px;
+    background-color: gray;
+}
+.album .show ul li.li_user {
+    width: 80px;
+    height: 100px;
+    background-color: #A2A5A5;
+}
+.album .show ul li.li_dir .cover,
+.album .show ul li.li_pic .cover {
+    width: 180px;
+    height: 180px;
+}
+.album .show ul li.li_user .cover {
+    width: 80px;
+    height: 80px;
+}
+.album .show ul li .explain {
+    margin-top: 10px;
+}
+.album .show ul li.li_user .explain {
+    margin-top: 5px;
+    font-size: 12px;
+}
+.album .show ul li .explain a:first-child {
+    float: left;
+}
+.album .show ul li .explain a:last-child {
+    float: right;
+}
+.album .show ul li.li_user .explain a:last-child {
+    display: none;
+}
+.album .show .mask {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 188px;
+    height: 228px;
+    background-color: rgba(0,0,0,.4);
+}
+.album .show .mask img {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+.meng {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    display: none;
+}
+.uploadFiles {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    padding: 30px 20px;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 180px;
+    background-color: #eee;
+    font-size: 14px;
+    border: 1px solid #bbb;
+}
+.uploadFiles #wenjianjia {
+    width: 128px;
+}
+.uploadFiles .left {
+    float: left;
+    width: 50%;
+}
+.uploadFiles .right {
+    float: right;
+    width: 50%;
+}
+.uploadFiles .right button {
+    margin-top: 30px;
+    width: 70px;
+    height: 25px;
+
+}

@@ -1,0 +1,136 @@
+form {
+    width: 350px;
+    margin: 80px auto;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    background: #FBFBFB url(/images/hua1.png);
+    background-size: cover;
+    padding: 50px 150px 30px 50px;
+    position: relative;
+}
+.item {
+    /* overflow: hidden; */
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+}
+.item::after {
+    content: "";
+    display: block;
+    clear: both;
+    margin-bottom: 10px;
+}
+p.left {
+    float: left;
+}
+p.right {
+    float: right;
+}
+p.tip {
+    position: absolute;
+    color: red;
+    right: 0px;
+    top: 0px;
+    font-size: 12px;
+    display: none;
+}
+p.tip span {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+}
+.pic {
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #E6E6FA;
+}
+.pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.select {
+    width: 80px;
+}
+.file {
+    width: 160px;
+}
+.red {
+    position: absolute;
+    left: -15px;
+    top: 3px;
+    color: red;
+}
+#registerBtn, #loginBtn {
+    width: 100px;
+    height: 38px;
+    border-radius: 3px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFE4E1;
+}
+#registerBtn:hover ,#loginBtn:hover {
+    background: #FADDE6;
+}
+#reregisterBtn, #resetBtn {
+    width: 100px;
+    height: 38px;
+    border-radius: 3px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFF0F5;
+    color: #393939;
+}
+#reregisterBtn:hover, #resetBtn:hover {
+ color:#000;   
+}
+.agree {
+    margin: 0 auto;
+    font-size: 12px;
+    padding: 10px;
+}
+.agree a {
+    color: rgb(0, 51, 153);
+    text-decoration: none;
+}
+p.vcode {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid #3D3D3D;
+    left: 0px;
+}
+.change {
+    position: absolute;
+    bottom: 10px;
+    right: 110px;
+    font-size: 12px;
+    color: rgb(0, 51, 153);
+    text-decoration: none;
+}
+.agree a:hover, .change:hover {
+    text-decoration: underline;
+}
+.remember {
+    width: 200px;
+    margin-top: 30px;
+    font-size: 12px;
+}
+.please {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+#file {
+    font-size: 13px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/reglog.css">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	
+	<form action="/login" method="post">
+		<div class="item">
+			<p class="left">
+				<span class="red">*</span>
+				<label for="username">用户名</label>
+			</p>
+			<p class="right">
+				<input type="text" name="username" id="username">
+			</p>
+			<p class="tip">
+				<span>√</span>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<span class="red">*</span>
+				<label for="password">密码</label>
+			</p>
+			<p class="right">
+				<input type="password" name="password" id="password">
+			</p>
+			<p class="tip">
+				<span>√</span>
+			</p>
+		</div>
+		<div class="pic">
+			<img src="images/default0.jpg" alt="头像" id="pic">
+		</div>
+		<div class="item remember">
+			<p class="left">
+				<input type="checkbox" name="autoLogin" id="autoLogin">
+				<label for="autoLogin">自动登录</label>
+			</p>
+			<p class="left lm2">
+				<input type="checkbox" name="rememberMe" id="rememberMe">
+				<label for="rememberMe">记住密码</label>
+			</p>
+		</div>
+		<div class="item">
+			<input id="loginBtn" type="submit" name="" value="立即登录">
+			<input id="reregisterBtn" class="lm5" type="button" name="" value="立即注册">
+		</div>
+
+	</form>
+
+	<script src="js/jquery-1.7.2.js"></script>
+	<script src="js/utils.js"></script>
+
+	<script>
+		var type = "login";
+
+		$("#reregisterBtn").click(function() {
+			window.open("/register.html");
+		})
+	</script>
+	<script src="js/common.js"></script>
+</body>
+</html>

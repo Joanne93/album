@@ -1,0 +1,117 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background: #FFFAFA url(../images/bj.gif);
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+}
+li,ol {
+    list-style: none;
+}
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.lm1 {
+    margin-left: 10px;
+}
+.lm2 {
+    margin-left: 20px;
+}
+.lm3 {
+    margin-left: 30px;
+}
+.lm4 {
+    margin-left: 40px;
+}
+.lm5 {
+    margin-left: 50px;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+header {
+    height: 50px;
+    background-color: #F2F2F2;
+    border: 1px solid #C4C4C4;
+}
+header .logo {
+    float: left;
+}
+header .logo img {
+    display: block;
+    width: 50px;
+    /* height: 50px; */
+}
+header .list {
+    float: left;
+}
+header .list ul li {
+    float: left;
+    margin-right: 10px;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    border-right: 1px solid #C4C4C4;
+    position: relative;
+}
+header .list ul li:first-child {
+    border-left: 1px solid #C4C4C4;
+}
+header .list ul li a {
+    font-family: "punctuation", "PingFangSC-Regular", "Microsoft Yahei", sans-serif;
+    /* font-weight: 700; */
+}
+header .list ul li .select {
+    position: absolute;
+    top: 50px;
+    left: -11px;
+    width: 320px;
+    height: 120px;
+    background-color: rgba(255,255,255,.8);
+    padding: 20px;
+    display: none;
+}
+header .list ul li .select li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #B3B3B3;
+}
+header .right {
+    float: right;
+}
+header .right ul li {
+    float: right;
+    /* margin-left: 10px; */
+    padding: 0 20px;
+    text-align: center;
+    line-height: 50px;
+    border-right: 1px solid #C4C4C4;
+    cursor: pointer;
+}
+header .right ul li:last-child {
+    border-left: 1px solid #C4C4C4;
+}
+footer {
+    height: 50px;
+    background-color: #F2F2F2;
+    border: 1px solid #C4C4C4;
+    padding-top: 20px;
+    text-align: center;
+}
+footer p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+

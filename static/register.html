@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/reglog.css">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	
+	<form action="/register" method="post" enctype="multipart/form-data">
+		<div class="item">
+			<p class="left">
+				<span class="red">*</span>
+				<label for="username">用户名</label>
+			</p>
+			<p class="right">
+				<input type="text" name="username" id="username">
+			</p>
+			<p class="tip">
+				<span>√</span>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<span class="red">*</span>
+				<label for="password">密码</label>
+			</p>
+			<p class="right">
+				<input type="password" name="password" id="password">
+			</p>
+			<p class="tip">
+				<span>√</span>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<span class="red">*</span>
+				<label for="password">重复密码</label>
+			</p>
+			<p class="right">
+				<input type="password" name="repassword" id="repassword">
+			</p>
+			<p class="tip">
+				<span>√</span>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<label for="email">邮箱</label>
+			</p>
+			<p class="right">
+				<input type="text" name="email" id="email">
+			</p>
+			<p class="tip">
+				<span>√</span>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<label for="phone">手机号码</label>
+			</p>
+			<p class="right">
+				<input type="text" name="phone" id="phone">
+			</p>
+			<p class="tip">
+				<span>√</span>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<label for="">性别</label>
+			</p>
+			<p class="right gender">
+				<label for="" class="lm1"><input type="radio" name="gender" value="X" checked>保密</label>
+				<label for="" class="lm1"><input type="radio" name="gender" value="F">女</label>
+				<label for="" class="lm1"><input type="radio" name="gender" value="M">男</label>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<label for="">爱好</label>
+			</p>
+			<p class="right hobby">
+				<label for="" class="lm1"><input type="checkbox" name="hobby" value="cf">吃饭</label>
+				<label for="" class="lm1"><input type="checkbox" name="hobby" value="sj">睡觉</label>
+				<label for="" class="lm1"><input type="checkbox" name="hobby" value="cg">唱歌</label>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<label for="">家乡</label>
+			</p>
+			<p class="right">
+				<select name="area" class="select" id="area">
+					<option value="sh">海淀区</option>
+					<option value="gz">朝阳区</option>
+					<option value="bj">昌平区</option>
+				</select>
+			</p>
+			<p class="right">
+				<select name="city" class="select" id="city">
+					<option value="bj">北京</option>
+					<option value="sh">上海</option>
+					<option value="tj">天津</option>
+				</select>
+			</p>
+		</div>
+		<div class="item">
+			<p class="left">
+				<label for="">上传头像</label>
+			</p>
+			<p class="right file">
+				<input id="file" type="file" name="file">
+			</p>
+		</div>
+		<div class="item">
+			<p class="right vcode changevc">
+			</p>
+			<a href="javascript:vcode()" class="change changevc">看不清楚?换一张</a>
+		</div>
+		<div class="item">
+			<p class="left">
+				<span class="red">*</span>
+				<p class="left">验证码</p>
+			</p>
+			<p class="right">
+				<input type="vcode" name="vcode" id="vcode">
+			</p>
+			<p class="tip">
+				<span>√</span>
+			</p>
+		</div>
+		<div class="item">
+			<p class="center agree">
+				<input type="checkbox" id="agree" checked>
+				<label for="agree">同意<a href="">"服务条款"</a>和<a href="">"隐私权相关政策"</a></label>
+				<span class="lm2 please">请接受服务条款</span>
+			</p>
+		</div>
+		<div class="item">
+			<input id="registerBtn" type="submit" name="" value="立即注册">
+			<input id="resetBtn" class="lm2" type="button" name="" value="重置">
+		</div>
+
+	</form>
+
+	<script src="js/jquery-1.7.2.js"></script>
+	<script src="js/utils.js"></script>
+	
+	<script>
+		$(function() {
+			type = "register";
+			// 换验证码
+			vcode();
+			reset();
+			// 二级联动
+			$("#city").change(function() {
+				var city = $(this).find("option:selected").val();
+				switch(city) {
+					case "bj":
+						$("#area").html(
+							"<option value='sh'>海淀区</option>"+
+							"<option value='gz'>朝阳区</option>"+
+							"<option value='bj'>昌平区</option>"
+						);
+						break;
+					case "sh":
+						$("#area").html(
+							"<option value='pd'>浦东区</option>"+
+							"<option value='mh'>闵行区</option>"+
+							"<option value='hq'>虹桥区</option>"
+						);
+						break;
+					case "tj":
+						$("#area").html(
+							"<option value='nk'>南开区</option>"+
+							"<option value='hx'>河西区</option>"+
+							"<option value='xq'>西青区</option>"
+						);
+						break;
+					default:
+						console.log("error");
+				}
+			})
+
+			$(".changevc")[0].onclick = vcode;
+
+			$("#resetBtn")[0].onclick = reset;
+
+			setInterval(vcode,30000)
+
+		})
+
+		// 换验证码
+		function vcode() {
+			$.ajax({
+				url: "/verifycode?type=register",
+				type: "get",
+				dataType: "json",
+				success: function(data) {
+					console.log(data);
+					$(".vcode").html(data.img);
+				}
+			})
+		}
+		
+		// 重置
+		function reset() {
+			$("#username").val("");
+			$("#password").val("");
+			$("#repassword").val("");
+			$("#email").val("");
+			$("#phone").val("");
+			$(".gender input[value='X']").prop("checked",true);
+			$(".hobby input").removeProp("checked");
+			$("#area").html(
+							"<option value='sh'>海淀区</option>"+
+							"<option value='gz'>朝阳区</option>"+
+							"<option value='bj'>昌平区</option>"
+						);
+			$("#city option[value='bj']").prop("selected",true);
+			$("#file").val("");
+			$("#vcode").val("");
+			$("#agree").attr("checked");
+			$(".tip").children().html("");
+
+		}
+	</script>
+	<script src="js/common.js"></script>
+
+</body>
+</html>
